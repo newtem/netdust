@@ -1,0 +1,51 @@
+code start
+
+room len(csv):
+    var result = _native.arr_len(csv)
+    return result
+end;
+
+room get(csv, idx):
+    var result = _native.arr_get(csv, idx)
+    return result
+end;
+
+room set(csv, idx, val):
+    var result = _native.arr_set(csv, idx, val)
+    return result
+end;
+
+room push(csv, val):
+    var result = _native.arr_push(csv, val)
+    return result
+end;
+
+room pop(csv):
+    var result = _native.arr_pop(csv)
+    return result
+end;
+
+room join(csv, sep):
+    var result = _native.arr_join(csv, sep)
+    return result
+end;
+
+room reverse(csv):
+    var result = _native.arr_reverse(csv)
+    return result
+end;
+
+room contains(csv, val):
+    var result = _native.arr_contains(csv, val)
+    return result
+end;
+
+room index(csv, val):
+    var result = _native.arr_index(csv, val)
+    return result
+end;
+
+room slice(csv, s, e):
+    var result = _native.arr_slice(csv, s, e)
+    return result
+end;

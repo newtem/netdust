@@ -1,0 +1,26 @@
+code start
+
+room print(value):
+    var _ = _native.io_print(value)
+end;
+
+room println(value):
+    var _ = _native.io_println(value)
+end;
+
+room input(prompt):
+    var result = _native.io_input(prompt)
+    return result
+end;
+
+room newline():
+    var _ = _native.io_print("")
+end;
+
+room hr():
+    var _ = _native.io_print("----------------------------------------")
+end;
+
+room dump(label, value):
+    var _ = _native.io_print(label + " => " + value)
+end;

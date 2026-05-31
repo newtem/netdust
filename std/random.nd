@@ -1,0 +1,30 @@
+code start
+
+room int(min, max):
+    var result = _native.rand_int(min, max)
+    return result
+end;
+
+room float(min, max):
+    var result = _native.rand_float(min, max)
+    return result
+end;
+
+room bool():
+    var result = _native.rand_bool()
+    return result
+end;
+
+room seed(n):
+    var _ = _native.rand_seed(n)
+end;
+
+room pick(csv):
+    var result = _native.rand_pick(csv)
+    return result
+end;
+
+room uuid():
+    var result = _native.rand_uuid()
+    return result
+end;

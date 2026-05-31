@@ -1,0 +1,106 @@
+code start
+
+room abs(x):
+    var result = _native.math_abs(x)
+    return result
+end;
+
+room pow(x, y):
+    var result = _native.math_pow(x, y)
+    return result
+end;
+
+room sqrt(x):
+    var result = _native.math_sqrt(x)
+    return result
+end;
+
+room floor(x):
+    var result = _native.math_floor(x)
+    return result
+end;
+
+room ceil(x):
+    var result = _native.math_ceil(x)
+    return result
+end;
+
+room round(x):
+    var result = _native.math_round(x)
+    return result
+end;
+
+room min(a, b):
+    var result = _native.math_min(a, b)
+    return result
+end;
+
+room max(a, b):
+    var result = _native.math_max(a, b)
+    return result
+end;
+
+room clamp(x, lo, hi):
+    var t = _native.math_min(x, hi)
+    var result = _native.math_max(lo, t)
+    return result
+end;
+
+room log(x):
+    var result = _native.math_log(x)
+    return result
+end;
+
+room log10(x):
+    var result = _native.math_log10(x)
+    return result
+end;
+
+room sin(x):
+    var result = _native.math_sin(x)
+    return result
+end;
+
+room cos(x):
+    var result = _native.math_cos(x)
+    return result
+end;
+
+room tan(x):
+    var result = _native.math_tan(x)
+    return result
+end;
+
+room pi():
+    var result = _native.math_pi()
+    return result
+end;
+
+room e():
+    var result = _native.math_e()
+    return result
+end;
+
+room sign(x):
+    var result = 0
+    if (x > 0):
+        result = 1
+    end;
+    if (x < 0):
+        result = -1
+    end;
+    return result
+end;
+
+room lerp(a, b, t):
+    var diff = b - a
+    var result = a + diff * t
+    return result
+end;
+
+// factorial: _native.math_factorial 에 위임합니다.
+// NativeLibraryRegistry 에 math_factorial 을 등록해두세요.
+room factorial(n):
+    var result = _native.math_factorial(n)
+    return result
+end;

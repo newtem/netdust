@@ -1,0 +1,22 @@
+code start
+
+room now():
+    var result = _native.time_now()
+    return result
+end;
+
+room ms():
+    var result = _native.time_ms()
+    return result
+end;
+
+room format(epoch):
+    var result = _native.time_format(epoch)
+    return result
+end;
+
+room today():
+    var epoch = _native.time_now()
+    var result = _native.time_format(epoch)
+    return result
+end;

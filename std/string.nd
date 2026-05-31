@@ -1,0 +1,81 @@
+code start
+
+room len(s):
+    var result = _native.str_len(s)
+    return result
+end;
+
+room upper(s):
+    var result = _native.str_upper(s)
+    return result
+end;
+
+room lower(s):
+    var result = _native.str_lower(s)
+    return result
+end;
+
+room trim(s):
+    var result = _native.str_trim(s)
+    return result
+end;
+
+room substr(s, start, len):
+    var result = _native.str_substr(s, start, len)
+    return result
+end;
+
+room index(s, sub):
+    var result = _native.str_index(s, sub)
+    return result
+end;
+
+room replace(s, from, to):
+    var result = _native.str_replace(s, from, to)
+    return result
+end;
+
+room starts(s, prefix):
+    var result = _native.str_starts(s, prefix)
+    return result
+end;
+
+room ends(s, suffix):
+    var result = _native.str_ends(s, suffix)
+    return result
+end;
+
+room contains(s, sub):
+    var result = _native.str_contains(s, sub)
+    return result
+end;
+
+room repeat(s, n):
+    var result = _native.str_repeat(s, n)
+    return result
+end;
+
+room rev(s):
+    var result = _native.str_rev(s)
+    return result
+end;
+
+room count(s, sub):
+    var result = _native.str_count(s, sub)
+    return result
+end;
+
+room pad_left(s, len, ch):
+    var result = _native.str_pad_left(s, len, ch)
+    return result
+end;
+
+room pad_right(s, len, ch):
+    var result = _native.str_pad_right(s, len, ch)
+    return result
+end;
+
+room is_empty(s):
+    var result = _native.cvt_is_empty(s)
+    return result
+end;

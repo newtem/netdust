@@ -1,0 +1,51 @@
+code start
+
+room to_int(x):
+    var result = _native.cvt_to_int(x)
+    return result
+end;
+
+room to_float(x):
+    var result = _native.cvt_to_float(x)
+    return result
+end;
+
+room to_str(x):
+    var result = _native.cvt_to_str(x)
+    return result
+end;
+
+room to_bool(x):
+    var result = _native.cvt_to_bool(x)
+    return result
+end;
+
+room is_num(x):
+    var result = _native.cvt_is_num(x)
+    return result
+end;
+
+room is_empty(x):
+    var result = _native.cvt_is_empty(x)
+    return result
+end;
+
+room to_hex(x):
+    var result = _native.cvt_hex(x)
+    return result
+end;
+
+room from_hex(s):
+    var result = _native.cvt_from_hex(s)
+    return result
+end;
+
+room to_ord(c):
+    var result = _native.cvt_ord(c)
+    return result
+end;
+
+room to_chr(n):
+    var result = _native.cvt_chr(n)
+    return result
+end;
