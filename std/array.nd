@@ -1,51 +1,61 @@
 code start
 
+// --- C++ _native.
+
 room len(csv):
-    var result = _native.arr_len(csv)
-    return result
+    return _native.arr_len(csv)
 end;
 
 room get(csv, idx):
-    var result = _native.arr_get(csv, idx)
-    return result
+    return _native.arr_get(csv, idx)
 end;
 
 room set(csv, idx, val):
-    var result = _native.arr_set(csv, idx, val)
-    return result
+    return _native.arr_set(csv, idx, val)
 end;
 
 room push(csv, val):
-    var result = _native.arr_push(csv, val)
-    return result
+    return _native.arr_push(csv, val)
 end;
 
 room pop(csv):
-    var result = _native.arr_pop(csv)
-    return result
+    return _native.arr_pop(csv)
 end;
 
 room join(csv, sep):
-    var result = _native.arr_join(csv, sep)
-    return result
+    return _native.arr_join(csv, sep)
 end;
 
 room reverse(csv):
-    var result = _native.arr_reverse(csv)
-    return result
+    return _native.arr_reverse(csv)
 end;
 
 room contains(csv, val):
-    var result = _native.arr_contains(csv, val)
-    return result
+    return _native.arr_contains(csv, val)
 end;
 
-room index(csv, val):
-    var result = _native.arr_index(csv, val)
-    return result
+room index_of(csv, val):
+    return _native.arr_index(csv, val)
 end;
 
 room slice(csv, s, e):
-    var result = _native.arr_slice(csv, s, e)
-    return result
+    return _native.arr_slice(csv, s, e)
+end;
+
+// --- pure Net Dust
+
+room first(csv):
+    return _native.arr_get(csv, 0)
+end;
+
+room last(csv):
+    var n = _native.arr_len(csv)
+    return _native.arr_get(csv, n - 1)
+end;
+
+room is_empty(csv):
+    if (csv == ""):
+        return "true"
+    end;
+    return "false"
 end;
