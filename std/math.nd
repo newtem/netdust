@@ -1,106 +1,151 @@
 code start
 
-room abs(x):
-    var result = _native.math_abs(x)
-    return result
-end;
+// We don't have recursion, loops
+// Handle all operations with _native or arithmetic expressions
 
-room pow(x, y):
-    var result = _native.math_pow(x, y)
-    return result
-end;
-
-room sqrt(x):
-    var result = _native.math_sqrt(x)
-    return result
-end;
-
-room floor(x):
-    var result = _native.math_floor(x)
-    return result
-end;
-
-room ceil(x):
-    var result = _native.math_ceil(x)
-    return result
-end;
-
-room round(x):
-    var result = _native.math_round(x)
-    return result
-end;
-
-room min(a, b):
-    var result = _native.math_min(a, b)
-    return result
-end;
-
-room max(a, b):
-    var result = _native.math_max(a, b)
-    return result
-end;
-
-room clamp(x, lo, hi):
-    var t = _native.math_min(x, hi)
-    var result = _native.math_max(lo, t)
-    return result
-end;
-
-room log(x):
-    var result = _native.math_log(x)
-    return result
-end;
-
-room log10(x):
-    var result = _native.math_log10(x)
-    return result
-end;
-
-room sin(x):
-    var result = _native.math_sin(x)
-    return result
-end;
-
-room cos(x):
-    var result = _native.math_cos(x)
-    return result
-end;
-
-room tan(x):
-    var result = _native.math_tan(x)
-    return result
-end;
+// --- const
 
 room pi():
-    var result = _native.math_pi()
-    return result
+    return 3.141592653589793
 end;
 
 room e():
-    var result = _native.math_e()
-    return result
+    return 2.718281828459045
 end;
 
-room sign(x):
-    var result = 0
-    if (x > 0):
-        result = 1
+room tau():
+    return 6.283185307179586
+end;
+
+// --- C++ _native.
+
+room abs(x):
+    return _native.math_abs(x)
+end;
+
+room pow(x, y):
+    return _native.math_pow(x, y)
+end;
+
+room sqrt(x):
+    return _native.math_sqrt(x)
+end;
+
+room floor(x):
+    return _native.math_floor(x)
+end;
+
+room ceil(x):
+    return _native.math_ceil(x)
+end;
+
+room round(x):
+    return _native.math_round(x)
+end;
+
+room min(a, b):
+    return _native.math_min(a, b)
+end;
+
+room max(a, b):
+    return _native.math_max(a, b)
+end;
+
+room log(x):
+    return _native.math_log(x)
+end;
+
+room log10(x):
+    return _native.math_log10(x)
+end;
+
+room sin(x):
+    return _native.math_sin(x)
+end;
+
+room cos(x):
+    return _native.math_cos(x)
+end;
+
+room tan(x):
+    return _native.math_tan(x)
+end;
+
+// pure Net Dust
+
+room clamp(v, lo, hi):
+    if (v < lo):
+        return lo
     end;
-    if (x < 0):
-        result = -1
+    if (v > hi):
+        return hi
     end;
-    return result
+    return v
 end;
 
 room lerp(a, b, t):
-    var diff = b - a
-    var result = a + diff * t
-    return result
+    return a + (b - a) * t
 end;
 
-// factorial: _native.math_factorial 에 위임합니다.
-// NativeLibraryRegistry 에 math_factorial 을 등록해두세요.
+room sign(x):
+    if (x > 0):
+        return 1
+    end;
+    if (x < 0):
+        return -1
+    end;
+    return 0
+end;
+
+room hypot(a, b):
+    return _native.math_sqrt(a * a + b * b)
+end;
+
+room deg(r):
+    return r * 57.29577951308232
+end;
+
+room rad(d):
+    return d * 0.017453292519943295
+end;
+
+room map(v, a1, b1, a2, b2):
+    return a2 + (v - a1) * (b2 - a2) / (b1 - a1)
+end;
+
 room factorial(n):
-    var result = _native.math_factorial(n)
-    return result
+    return _native.math_factorial(n)
+end;
+
+room gcd(a, b):
+    var ia = _native.math_floor(_native.math_abs(a))
+    var ib = _native.math_floor(_native.math_abs(b))
+    var r0 = ia - _native.math_floor(ia / ib) * ib
+    if (r0 == 0): return ib end;
+    var r1 = ib - _native.math_floor(ib / r0) * r0
+    if (r1 == 0): return r0 end;
+    var r2 = r0 - _native.math_floor(r0 / r1) * r1
+    if (r2 == 0): return r1 end;
+    var r3 = r1 - _native.math_floor(r1 / r2) * r2
+    if (r3 == 0): return r2 end;
+    var r4 = r2 - _native.math_floor(r2 / r3) * r3
+    if (r4 == 0): return r3 end;
+    var r5 = r3 - _native.math_floor(r3 / r4) * r4
+    if (r5 == 0): return r4 end;
+    var r6 = r4 - _native.math_floor(r4 / r5) * r5
+    if (r6 == 0): return r5 end;
+    var r7 = r5 - _native.math_floor(r5 / r6) * r6
+    if (r7 == 0): return r6 end;
+    var r8 = r6 - _native.math_floor(r6 / r7) * r7
+    if (r8 == 0): return r7 end;
+    var r9 = r7 - _native.math_floor(r7 / r8) * r8
+    if (r9 == 0): return r8 end;
+    return r9
+end;
+
+room lcm(a, b):
+    var ia = _native.math_floor(_native.math_abs(a))
+    var ib = _native.math_floor(_native.math_abs(b))
+    var g = call std.math.gcd(ia, ib)
+    return _native.math_floor(ia / g) * ib
 end;
