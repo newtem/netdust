@@ -1,51 +1,65 @@
 code start
 
+// --- C++ _native.
+
 room to_int(x):
-    var result = _native.cvt_to_int(x)
-    return result
+    return _native.cvt_to_int(x)
 end;
 
 room to_float(x):
-    var result = _native.cvt_to_float(x)
-    return result
+    return _native.cvt_to_float(x)
 end;
 
 room to_str(x):
-    var result = _native.cvt_to_str(x)
-    return result
-end;
-
-room to_bool(x):
-    var result = _native.cvt_to_bool(x)
-    return result
-end;
-
-room is_num(x):
-    var result = _native.cvt_is_num(x)
-    return result
-end;
-
-room is_empty(x):
-    var result = _native.cvt_is_empty(x)
-    return result
+    return _native.cvt_to_str(x)
 end;
 
 room to_hex(x):
-    var result = _native.cvt_hex(x)
-    return result
+    return _native.cvt_hex(x)
 end;
 
 room from_hex(s):
-    var result = _native.cvt_from_hex(s)
-    return result
+    return _native.cvt_from_hex(s)
 end;
 
 room to_ord(c):
-    var result = _native.cvt_ord(c)
-    return result
+    return _native.cvt_ord(c)
 end;
 
 room to_chr(n):
-    var result = _native.cvt_chr(n)
-    return result
+    return _native.cvt_chr(n)
+end;
+
+// --- pure Net Dust
+
+// to_bool(x)  —  "true" / "false"
+room to_bool(x):
+    if (x == "true"):
+        return "true"
+    end;
+    if (x == "1"):
+        return "true"
+    end;
+    if (x == ""):
+        return "false"
+    end;
+    if (x == "0"):
+        return "false"
+    end;
+    if (x == "false"):
+        return "false"
+    end;
+    return "true"
+end;
+
+// it's C++ _native.
+room is_num(x):
+    return _native.cvt_is_num(x)
+end;
+
+room is_empty(x):
+    if (x == ""):
+        return "true"
+    end;
+    return "false"
 end;
