@@ -1,0 +1,4 @@
+name    = main
+version = 0.1.0
+entry   = main.nd
+nd      = 26
