@@ -1,0 +1,13 @@
+code start
+
+// --- c++ _native.
+
+room label_create(window_id, text, x, y, w, h):
+    ui.label_create = window_id + "," + text + "," + x + "," + y + "," + w + "," + h
+    var result = ui.return
+    return result
+end;
+
+room label_text(widget_id, text):
+    ui.label_text = widget_id + "," + text
+end;
