@@ -1,0 +1,19 @@
+code start
+
+// C++ _native.
+
+room field_create(window_id, placeholder, x, y, w, h):
+    ui.field_create = window_id + "," + placeholder + "," + x + "," + y + "," + w + "," + h
+    var result = ui.return
+    return result
+end;
+
+room field_value(widget_id):
+    ui.field_value = widget_id
+    var result = ui.return
+    return result
+end;
+
+room field_set(widget_id, text):
+    ui.field_set = widget_id + "," + text
+end;
