@@ -1,6 +1,6 @@
 code start
 
-// C++ _native.
+// --- C++ _native.
 
 room field_create(window_id, placeholder, x, y, w, h):
     ui.field_create = window_id + "," + placeholder + "," + x + "," + y + "," + w + "," + h
