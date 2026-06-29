@@ -1,0 +1,13 @@
+code start
+
+// --- C++ _native.
+
+room button_create(window_id, text, x, y, w, h):
+    ui.button_create = window_id + "," + text + "," + x + "," + y + "," + w + "," + h
+    var result = ui.return
+    return result
+end;
+
+room button_onclick(widget_id, room_name):
+    ui.button_onclick = widget_id + "," + room_name
+end;
