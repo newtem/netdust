@@ -1,0 +1,29 @@
+code start
+
+// --- C++ _native.
+
+room window_create(title, width, height):
+    ui.window_create = title + "," + width + "," + height
+    var result = ui.return
+    return result
+end;
+
+room window_show(window_id):
+    ui.window_show = window_id
+end;
+
+room window_hide(window_id):
+    ui.window_hide = window_id
+end;
+
+room window_close(window_id):
+    ui.window_close = window_id
+end;
+
+room window_title(window_id, title):
+    ui.window_title = window_id + "," + title
+end;
+
+room window_run():
+    ui.window_run = ""
+end;
