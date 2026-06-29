@@ -1,0 +1,15 @@
+code start
+
+// C++ _native.
+
+room widget_hide(widget_id):
+    ui.widget_hide = widget_id
+end;
+
+room widget_show(widget_id):
+    ui.widget_show = widget_id
+end;
+
+room widget_remove(widget_id):
+    ui.widget_remove = widget_id
+end;
