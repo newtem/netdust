@@ -1,6 +1,6 @@
 code start
 
-// C++ _native.
+// --- C++ _native.
 
 room alert(title, message):
     ui.alert = title + "," + message
