@@ -1,6 +1,6 @@
 code start
 
-// C++ _native.
+// --- C++ _native.
 
 room widget_hide(widget_id):
     ui.widget_hide = widget_id
