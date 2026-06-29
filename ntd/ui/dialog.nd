@@ -1,0 +1,19 @@
+code start
+
+// C++ _native.
+
+room alert(title, message):
+    ui.alert = title + "," + message
+end;
+
+room confirm(title, message):
+    ui.confirm = title + "," + message
+    var result = ui.return
+    return result
+end;
+
+room prompt(title, message, default):
+    ui.prompt = title + "," + message + "," + default
+    var result = ui.return
+    return result
+end;
