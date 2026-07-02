@@ -14,5 +14,6 @@ etc.
 
 > removed commands
 
+- import
 - bullet_log
 - loading_block
