@@ -2,8 +2,9 @@
 Under improvement & development
 > 2026-01-17 released
 
-C++ based
-(The original C# .NET ND26 engine has been removed.)
+C++ based - Net Dust Runtime
+
+C# .NET based - Noctura Engine, TIT4N Engine
 
 > commands
 
