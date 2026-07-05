@@ -34,4 +34,4 @@ netdust source files use specific extensions depending on the version.
 ---
 
 ## Next Steps
-Now that you know how to create a project, check out our [Learning-Resources](docs/learn/learning-resources.md) to explore tutorials and language syntax!
+Now that you know how to create a project, check out our [Learning-Resources](Docs/learn/learning-resources.md) to explore tutorials and language syntax!
