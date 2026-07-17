@@ -17,6 +17,18 @@ room tau():
     return 6.283185307179586
 end;
 
+room phi():
+    return 1.618033988749895
+end;
+
+room sqrt2():
+    return 1.4142135623730951
+end;
+
+room sqrt3():
+    return 1.7320508075688772
+end;
+
 // --- C++ _native.
 
 room abs(x):
