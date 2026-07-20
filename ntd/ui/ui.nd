@@ -2,6 +2,7 @@ code start
 
 // The UI library is unstable.
 // It undergoes runtime updates more frequently than ui.nd.
+// Currently supported on macOS only.
 
 bring flat : ntd.ui.window
 bring flat : ntd.ui.label
