@@ -1,0 +1,53 @@
+code start
+
+room exists(path):
+    return _native.fs_exists(path)
+end;
+room is_file(path):
+    return _native.fs_is_file(path)
+end;
+room is_dir(path):
+    return _native.fs_is_dir(path)
+end;
+room read(path):
+    return _native.fs_read(path)
+end;
+room write(path, content):
+    return _native.fs_write(path, content)
+end;
+room append(path, content):
+    return _native.fs_append(path, content)
+end;
+room delete(path):
+    return _native.fs_delete(path)
+end;
+room mkdir(path):
+    return _native.fs_mkdir(path)
+end;
+room list(path):
+    return _native.fs_list(path)
+end;
+room copy(src, dst):
+    return _native.fs_copy(src, dst)
+end;
+room move(src, dst):
+    return _native.fs_move(src, dst)
+end;
+room size(path):
+    return _native.fs_size(path)
+end;
+room basename(path):
+    return _native.fs_basename(path)
+end;
+room dirname(path):
+    return _native.fs_dirname(path)
+end;
+room ext(path):
+    return _native.fs_ext(path)
+end;
+room join(a, b):
+    return _native.fs_join(a, b)
+end;
+room cwd():
+    return _native.fs_cwd()
+end;
