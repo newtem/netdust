@@ -1,10 +1,10 @@
 # Building NetDust Standalone CLI
 
-Here is the step-by-step guide to compiling a cross-platform, standalone NetDust application for both Linux and macOS:
+Here is the step by step guide to compiling a cross platform, standalone NetDust application for both Linux and macOS:
 
 > [!IMPORTANT]
 > - Ensure you have a C++17 compatible compiler (`g++` or `clang++`) installed on your system.
-> - The `xxd` command-line utility must be available (pre-installed by default on macOS and most Linux distributions).
+> - The `xxd` command line utility must be available (pre installed by default on macOS and most Linux distributions).
 
 ## 1. Project Directory Setup
 
