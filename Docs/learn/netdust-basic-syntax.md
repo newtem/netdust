@@ -30,7 +30,7 @@ Comments can be written with either `//` or `#`:
 netdust supports three variable keywords: `var`, `num`, and `bool`.
 
 ```netdust
-var name = "newtem"
+var name = "admin"
 num count = 3
 bool ready = true
 ```
