@@ -42,8 +42,6 @@ room slice(csv, s, e):
     return _native.arr_slice(csv, s, e)
 end;
 
-// --- pure Net Dust
-
 room first(csv):
     return _native.arr_get(csv, 0)
 end;
@@ -52,6 +50,8 @@ room last(csv):
     var n = _native.arr_len(csv)
     return _native.arr_get(csv, n - 1)
 end;
+
+// --- pure Net Dust
 
 room is_empty(csv):
     if (csv == ""):
