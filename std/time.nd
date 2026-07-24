@@ -27,8 +27,6 @@ room sleep_us(us):
     return result
 end;
 
-// --- pure Net Dust
-
 // Returns as YYYY/MM/DD HH:MM:SS
 room today():
     var epoch = _native.time_now()
