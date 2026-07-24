@@ -11,8 +11,10 @@ Every `.nd` file must start with a `code start` marker:
 ```netdust
 code start
 
+bring : std.io
+
 room main():
-    call io.println("Hello, netdust!")
+    call std.io.println("Hello, netdust!")
 end;
 ```
 
@@ -43,11 +45,11 @@ A **room** is netdust's equivalent of a function. Every program needs a `main()`
 
 ```netdust
 room greet(name):
-    call io.println("Hi, " + name)
+    call std.io.println("Hi, " + name)
 end;
 
 room main():
-    call greet("newtem")
+    call greet("admin")
 end;
 ```
 
